@@ -41,10 +41,24 @@ namespace ProjectEuler.Tests
         }
 
         [Test]
-        public void GetSumOfMultiplesBelow_Six_Three()
+        public void GetSumOfMultiplesBelow_Five_Three()
         {
-            var results = _class1.GetSumOfMultiplesBelow(6);
+            var results = _class1.GetSumOfMultiplesBelow(5);
             Assert.AreEqual(3, results);
         }
+
+        [Test]
+        public void GetSumOfMultiplesBelow_Six_Eight()
+        {
+            var results = _class1.GetSumOfMultiplesBelow(6);
+            Assert.AreEqual(8, results);
+        }
+        /*
+        [Test]
+        public void GetSumOMultipleBelow_Ten_TwentyThree()
+        {
+            var results = _class1.GetSumOfMultiplesBelow(10);
+            Assert.AreEqual(23, results);
+        }*/
     }
 }

@@ -17,18 +17,30 @@ namespace ProjectEuler
 
             var multipleThreeSum = SumWholeNumbersForThree(number);
 
+            var multipleFiveSum = (number < 5 ? 0 : SumWholeNumbersForFive(number));
 
-            return multipleThreeSum;
+            return multipleThreeSum + multipleFiveSum;
         }
 
         private Int32 SumWholeNumbersForThree(int belowNumber)
         {
-            
             var sum = 0;
             for(int i = 1; i < belowNumber; i++)
             {
                 //var number = (i * 3);
                 sum += (i % 3) == 0 ? i : 0;
+            }
+
+            return sum;
+        }
+
+        private Int32 SumWholeNumbersForFive(int belowNumber)
+        {
+            var sum = 0;
+            for (int i = 1; i < belowNumber; i++)
+            {
+                //var number = (i * 3);
+                sum += (i % 5) == 0 ? i : 0;
             }
 
             return sum;

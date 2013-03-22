@@ -27,7 +27,6 @@ namespace ProjectEuler
             var sum = 0;
             for(int i = 1; i < belowNumber; i++)
             {
-                //var number = (i * 3);
                 sum += (i % 3) == 0 ? i : 0;
             }
 
@@ -39,7 +38,6 @@ namespace ProjectEuler
             var sum = 0;
             for (int i = 1; i < belowNumber; i++)
             {
-                //var number = (i * 3);
                 sum += (i % 5) == 0 ? i : 0;
             }
 

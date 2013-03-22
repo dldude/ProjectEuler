@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ClassLibrary1
+namespace ProjectEuler
 {
-    class MultiplesOf3Or5
+    public class MultiplesOf3Or5
     {
+        public Int32 GetSumOfMultiplesBelow(int number)
+        {
+            return 0;
+        }
     }
 }

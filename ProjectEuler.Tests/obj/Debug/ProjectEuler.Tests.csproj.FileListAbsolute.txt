@@ -1,0 +1,9 @@
+C:\Users\srgdev\Documents\GitHub\ProjectEuler\ProjectEuler.Tests\obj\Debug\ProjectEuler.Tests.csprojResolveAssemblyReference.cache
+C:\Users\srgdev\Documents\GitHub\ProjectEuler\ProjectEuler.Tests\bin\Debug\ProjectEuler.Tests.dll
+C:\Users\srgdev\Documents\GitHub\ProjectEuler\ProjectEuler.Tests\bin\Debug\ProjectEuler.Tests.pdb
+C:\Users\srgdev\Documents\GitHub\ProjectEuler\ProjectEuler.Tests\bin\Debug\ClassLibrary1.dll
+C:\Users\srgdev\Documents\GitHub\ProjectEuler\ProjectEuler.Tests\bin\Debug\nunit.framework.dll
+C:\Users\srgdev\Documents\GitHub\ProjectEuler\ProjectEuler.Tests\bin\Debug\ClassLibrary1.pdb
+C:\Users\srgdev\Documents\GitHub\ProjectEuler\ProjectEuler.Tests\bin\Debug\nunit.framework.xml
+C:\Users\srgdev\Documents\GitHub\ProjectEuler\ProjectEuler.Tests\obj\Debug\ProjectEuler.Tests.dll
+C:\Users\srgdev\Documents\GitHub\ProjectEuler\ProjectEuler.Tests\obj\Debug\ProjectEuler.Tests.pdb

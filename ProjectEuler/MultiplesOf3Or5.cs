@@ -12,6 +12,9 @@ namespace ProjectEuler
             if (number == 0)
                 return 0;
 
+            if (number < 3)
+                return 0;
+
             return 0;
         }
     }

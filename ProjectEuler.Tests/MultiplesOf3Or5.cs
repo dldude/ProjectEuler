@@ -27,9 +27,16 @@ namespace ProjectEuler.Tests
         }
 
         [Test]
-        public void GetSumOfMultiplesBelow_1_Zero()
+        public void GetSumOfMultiplesBelow_One_Zero()
         {
             var results = _class1.GetSumOfMultiplesBelow(1);
+            Assert.AreEqual(0, results);
+        }
+
+        [Test]
+        public void GetSumOfMultiplesBelow_Two_Zero()
+        {
+            var results = _class1.GetSumOfMultiplesBelow(2);
             Assert.AreEqual(0, results);
         }
     }

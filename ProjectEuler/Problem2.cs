@@ -48,6 +48,17 @@ namespace ProjectEuler
                 _previous = _calc;
                 _calc = _sum;
             }
+
+            if (EvenValued)
+            {
+                EvenValuedTermsOnly();
+                return;
+            }
+
+            if (OddValued)
+            {
+                return;
+            }
         }
 
         private void GenerateSequenceForCeiling(Int32 ceiling)
@@ -65,6 +76,26 @@ namespace ProjectEuler
             {
                 var listCount = Sequence.Count();
                 Sequence.RemoveAt(listCount - 1);
+            }
+
+            if (EvenValued)
+            {
+                EvenValuedTermsOnly();
+                return;
+            }
+
+            if (OddValued)
+            {
+                return;
+            }
+        }
+
+        private void EvenValuedTermsOnly()
+        {
+            for (int i = 0; i < Sequence.Count - 1; i++)
+            {
+                if (Sequence[i] % 2 != 0)
+                    Sequence.RemoveAt(i);
             }
         }
     }

@@ -78,6 +78,23 @@ namespace ProjectEuler.Tests
             var result = _class.GenerateFibonacciSequence(4000000);
             Assert.AreEqual(9227463, result.Sum());
         }
-        
+
+        [Test]
+        public void GenerateFibonacciSequence_ForCeilingAndInput4MillionEvenTerms_ListContains21Elements()
+        {
+            _class.ForCeiling = true;
+            _class.EvenValued = true;
+            var result = _class.GenerateFibonacciSequence(4000000);
+            Assert.AreEqual(21, result.Count);
+        }
+
+        [Test]
+        public void GenerateFibonacciSequence_ForCeilingAndInput4MillionEvenTerms_Sum()
+        {
+            _class.ForCeiling = true;
+            _class.EvenValued = true;
+            var result = _class.GenerateFibonacciSequence(4000000);
+            Assert.AreEqual(7465174, result.Sum());
+        }
     }
 }

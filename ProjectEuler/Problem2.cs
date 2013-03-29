@@ -13,6 +13,9 @@ namespace ProjectEuler
         public bool ForCeiling { get; set; }
 
         private List<Int32> Sequence = new List<Int32>();
+        private int _previous = 1;
+        private int _calc = 0;
+        private int _sum = 0;
 
         public List<Int32> GenerateFibonacciSequence(Int32 number)
         {
@@ -28,42 +31,40 @@ namespace ProjectEuler
             return Sequence;
         }
 
+        private void GenerateBaseSequence()
+        {
+            Sequence.Add(_previous);
+            _calc = _previous + _previous;
+            Sequence.Add(_calc);
+        }
+
         private void GenerateSequenceForTerms(int numberOfTerms)
         {
-            int previous = 1;
-            int calc = 0;
-            int sum = 0;
-            for (int i = 1; i < numberOfTerms; i++)
+            GenerateBaseSequence();
+            for (int i = 1; i < numberOfTerms - 1; i++)
             {
-                if (calc == 0)
-                {
-                    Sequence.Add(previous);
-                    calc = previous + previous;
-                    Sequence.Add(calc);
-                }
-                else
-                {
-                    sum = previous + calc;
-                    Sequence.Add(sum);
-                    previous = calc;
-                    calc = sum;
-                }
+                _sum = _previous + _calc;
+                Sequence.Add(_sum);
+                _previous = _calc;
+                _calc = _sum;
             }
         }
 
         private void GenerateSequenceForCeiling(Int32 ceiling)
         {
-            int previous = 1;
-            int calc = 0;
+            GenerateBaseSequence();
             while (Sequence.Sum() < ceiling)
             {
-                if (calc == 0)
-                {
-                    Sequence.Add(previous);
-                    calc = previous + previous;
-                    Sequence.Add(calc);
-                }
+                _sum = _previous + _calc;
+                Sequence.Add(_sum);
+                _previous = _calc;
+                _calc = _sum;
+            }
 
+            if (Sequence.Sum() > ceiling)
+            {
+                var listCount = Sequence.Count();
+                Sequence.RemoveAt(listCount - 1);
             }
         }
     }

@@ -48,11 +48,11 @@ namespace ProjectEuler.Tests
         }
 
         [Test]
-        public void GenerateFibonacciSequence_ForCeilingAndInput10_ListContains2Elements()
+        public void GenerateFibonacciSequence_ForCeilingAndInput10_ListContains5Elements()
         {
             _class.ForCeiling = true;
             var result = _class.GenerateFibonacciSequence(10);
-            Assert.AreEqual(3, result.Count());
+            Assert.AreEqual(5, result.Count());
         }
 
         [Test]
@@ -60,7 +60,7 @@ namespace ProjectEuler.Tests
         {
             _class.ForCeiling = true;
             var result = _class.GenerateFibonacciSequence(10);
-            Assert.AreEqual(6, result.Sum());
+            Assert.AreEqual(19, result.Sum());
         }
     }
 }

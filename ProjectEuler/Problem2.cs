@@ -53,7 +53,7 @@ namespace ProjectEuler
         private void GenerateSequenceForCeiling(Int32 ceiling)
         {
             GenerateBaseSequence();
-            while (Sequence.Sum() < ceiling)
+            while (_calc < ceiling)
             {
                 _sum = _previous + _calc;
                 Sequence.Add(_sum);
@@ -61,7 +61,7 @@ namespace ProjectEuler
                 _calc = _sum;
             }
 
-            if (Sequence.Sum() > ceiling)
+            if (_calc > ceiling)
             {
                 var listCount = Sequence.Count();
                 Sequence.RemoveAt(listCount - 1);

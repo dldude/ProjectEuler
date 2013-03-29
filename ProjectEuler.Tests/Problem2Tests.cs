@@ -38,5 +38,13 @@ namespace ProjectEuler.Tests
             var result = _class.GenerateFibonacciSequence(10);
             Assert.AreEqual(10, result.Count);
         }
+
+        [Test]
+        public void GenerateFibonacciSequence_ForTermsTrueAndInput10_Sum231()
+        {
+            _class.ForTerms = true;
+            var result = _class.GenerateFibonacciSequence(10);
+            Assert.AreEqual(231, result.Sum());
+        }
     }
 }

@@ -16,7 +16,8 @@ namespace ProjectEuler
 
         public List<Int32> GenerateFibonacciSequence(Int32 number)
         {
-            Sequence.Add(0);
+            if (!ForTerms && !ForCeiling)
+                Sequence.Add(0);
 
             if (ForTerms && number > 0)
                 GenerateSequenceForTerms(number);
@@ -32,7 +33,7 @@ namespace ProjectEuler
             int previous = 1;
             int calc = 0;
             int sum = 0;
-            for (int i = 0; i < numberOfTerms; i++)
+            for (int i = 1; i < numberOfTerms; i++)
             {
                 if (calc == 0)
                 {

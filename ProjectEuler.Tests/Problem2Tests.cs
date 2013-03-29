@@ -56,11 +56,28 @@ namespace ProjectEuler.Tests
         }
 
         [Test]
-        public void GenerateFibonacciSequence_ForCeilingAndInput10_ExpectedResult()
+        public void GenerateFibonacciSequence_ForCeilingAndInput10_Sum19()
         {
             _class.ForCeiling = true;
             var result = _class.GenerateFibonacciSequence(10);
             Assert.AreEqual(19, result.Sum());
         }
+
+        [Test]
+        public void GenerateFibonacciSequence_ForCeilingAndInput4Million_ListContains32Elements()
+        {
+            _class.ForCeiling = true;
+            var result = _class.GenerateFibonacciSequence(4000000);
+            Assert.AreEqual(32, result.Count());
+        }
+
+        [Test]
+        public void GenerateFibonacciSequence_ForCeilingAndInput4Million_Sum()
+        {
+            _class.ForCeiling = true;
+            var result = _class.GenerateFibonacciSequence(4000000);
+            Assert.AreEqual(9227463, result.Sum());
+        }
+        
     }
 }

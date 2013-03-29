@@ -2,3 +2,4 @@ C:\Users\srgdev\Documents\GitHub\ProjectEuler\ProjectEuler\bin\Debug\ClassLibrar
 C:\Users\srgdev\Documents\GitHub\ProjectEuler\ProjectEuler\bin\Debug\ClassLibrary1.pdb
 C:\Users\srgdev\Documents\GitHub\ProjectEuler\ProjectEuler\obj\Debug\ClassLibrary1.dll
 C:\Users\srgdev\Documents\GitHub\ProjectEuler\ProjectEuler\obj\Debug\ClassLibrary1.pdb
+C:\Users\srgdev\Documents\GitHub\ProjectEuler\ProjectEuler\obj\Debug\ProjectEuler.csprojResolveAssemblyReference.cache

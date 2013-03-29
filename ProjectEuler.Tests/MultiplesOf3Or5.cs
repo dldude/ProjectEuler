@@ -60,5 +60,12 @@ namespace ProjectEuler.Tests
             var results = _class1.GetSumOfMultiplesBelow(10);
             Assert.AreEqual(23, results);
         }
+
+        [Test]
+        public void GetSumOfMultiples_OneThousand_ExpectedResult()
+        {
+            var results = _class1.GetSumOfMultiplesBelow(1000);
+            Assert.AreEqual(233168, results);
+        }
     }
 }

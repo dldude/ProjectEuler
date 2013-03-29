@@ -7,6 +7,8 @@ namespace ProjectEuler
 {
     public class MultiplesOf3Or5
     {
+        private List<int> _sum;
+
         public Int32 GetSumOfMultiplesBelow(int number)
         {
             if (number == 0)
@@ -15,33 +17,36 @@ namespace ProjectEuler
             if (number < 3)
                 return 0;
 
-            var multipleThreeSum = SumWholeNumbersForThree(number);
+            _sum = new List<int>();
 
-            var multipleFiveSum = (number < 5 ? 0 : SumWholeNumbersForFive(number));
+            SumWholeNumbersForThree(number);
 
-            return multipleThreeSum + multipleFiveSum;
+            SumWholeNumbersForFive(number);
+
+            return _sum.Sum();
         }
 
-        private Int32 SumWholeNumbersForThree(int belowNumber)
+        private void SumWholeNumbersForThree(int belowNumber)
         {
-            var sum = 0;
+            //var sum = new List<int>();
             for(int i = 1; i < belowNumber; i++)
             {
-                sum += (i % 3) == 0 ? i : 0;
+                _sum.Add((i % 3) == 0 ? i : 0);
             }
 
-            return sum;
+            //return sum;
         }
 
-        private Int32 SumWholeNumbersForFive(int belowNumber)
+        private void SumWholeNumbersForFive(int belowNumber)
         {
-            var sum = 0;
+            //var sum = new List<int>();
             for (int i = 1; i < belowNumber; i++)
             {
-                sum += (i % 5) == 0 ? i : 0;
+                if (!_sum.Contains((i % 5) == 0 ? i : 0))
+                    _sum.Add((i % 5) == 0 ? i : 0);
             }
 
-            return sum;
+            //return sum;
         }
     }
 }
